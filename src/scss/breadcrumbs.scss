@@ -1,0 +1,35 @@
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+
+        li {
+            &::after{
+                content: '>';
+                font-size: calc(9px + 7 * (100vw / 1440));
+                color: $text_blue;
+                margin: 0 .5em;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+
+            a {
+                font-size: calc(9px + 7 * (100vw / 1440));
+                color: $text_blue;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .active {
+                color: $button_green;
+            }
+
+            .inactive {
+                pointer-events: none;
+            }
+        }
+}

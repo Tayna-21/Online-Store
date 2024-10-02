@@ -1,0 +1,23 @@
+@import "vars.scss";
+@import "templates.scss";
+
+.next-step-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 36px;
+    background-color: $button_green;
+    border-radius: $border_radius;
+    color: $text_white;
+    font-size: 15px;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, .05);
+
+    &:hover {
+        @extend %hover-button;
+    }
+
+    &:disabled {
+        @extend %disabled-button;
+    }
+}

@@ -1,0 +1,31 @@
+ [
+    {
+        "id": "1",
+        "countryName": "United States",
+        "states": ["Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "California",
+            "Colorado", "Connecticut", "Delaware", "District of Columbia", "Federated States of Micronesia",
+            "Florida", "Georgia", "Guam", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas",
+            "Kentucky", "Louisiana", "Maine", "Marshall Islands", "Maryland", "Massachusetts", "Michigan",
+            "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey",
+            "New Mexico", "New York", "North Carolina", "North Dakota", "Northern Mariana Islands", "Ohio",
+            "Oklahoma", "Oregon", "Palau", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina",
+            "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virgin Island", "Virginia",
+            "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+    },
+    {
+        "id": "2",
+        "countryName": "Canada",
+        "states": ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", 
+            "Northwest Territories", "Nova Scotia", "Nunavut', 'Ontario", "Prince Edward Island", "Quebec", 
+            "Saskatchewan", "Yukon Territory"]
+    },
+    {
+        "id": "3",
+        "countryName": "Mexico",
+        "states": ["Aguascalientes", "Baja California", "Baja California Sur", "Chihuahua", "Colima", "Campeche",
+            "Coahuila", "Chiapas", "Federal District", "Durango", "Guerrero", "Guanajuato", "Hidalgo", "Jalisco",
+            "México State", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", 
+            "Quintana Roo", "Sinaloa", "San Luis Potosí", "Sonora", "Tabasco", "Tlaxcala", "Tamaulipas",
+            "Veracruz", "Yucatán", "Zacatecas"]
+    }
+]

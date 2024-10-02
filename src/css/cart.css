@@ -1,0 +1,467 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+.wrapper main .container .content .next-step-btn:hover, .wrapper main .container .content .cart-list-products li .quantity-and-price .quantity button:hover, .wrapper main .container .content .cart-list-products li .description-and-delete-button .delete-button:hover {
+  border: 1px solid #5ce171;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.wrapper main .container .content .cart-list-products li .quantity-and-price .quantity button:disabled {
+  background-color: #187727;
+  cursor: none;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+.wrapper main .container .content .next-step-btn:hover, .wrapper main .container .content .cart-list-products li .quantity-and-price .quantity button:hover, .wrapper main .container .content .cart-list-products li .description-and-delete-button .delete-button:hover {
+  border: 1px solid #5ce171;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.wrapper main .container .content .cart-list-products li .quantity-and-price .quantity button:disabled {
+  background-color: #187727;
+  cursor: none;
+}
+
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.breadcrumbs li::after {
+  content: ">";
+  font-size: calc(9px + 0.4861111111vw);
+  color: #243573;
+  margin: 0 0.5em;
+}
+.breadcrumbs li:last-child::after {
+  display: none;
+}
+.breadcrumbs li a {
+  font-size: calc(9px + 0.4861111111vw);
+  color: #243573;
+}
+.breadcrumbs li a:hover {
+  text-decoration: underline;
+}
+.breadcrumbs li .active {
+  color: #00ae1c;
+}
+.breadcrumbs li .inactive {
+  pointer-events: none;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: #f2f5f7;
+}
+.wrapper main {
+  width: 100%;
+  padding: 40px 1em 100px 1em;
+  min-height: 100vh;
+}
+.wrapper main .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.wrapper main .container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+.wrapper main .container .content h1 {
+  font-size: calc(24px + 0.5555555556vw);
+  color: #243573;
+}
+.wrapper main .container .content .cart-list-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.wrapper main .container .content .cart-list-products li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 130px 15px auto;
+  grid-template-columns: 130px auto;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+      grid-template-areas: "image description" "image quantity";
+  gap: 15px;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+@media (max-width: 650px) {
+  .wrapper main .container .content .cart-list-products li {
+    -ms-grid-columns: auto 15px auto;
+    grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: auto 15px auto;
+        grid-template-areas: "image description" "quantity description";
+    gap: 15px;
+  }
+}
+@media (max-width: 440px) {
+  .wrapper main .container .content .cart-list-products li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 35px;
+  }
+}
+.wrapper main .container .content .cart-list-products li .img-cart-item {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: image;
+  width: 130px;
+  height: 130px;
+}
+@media (max-width: 440px) {
+  .wrapper main .container .content .cart-list-products li .img-cart-item {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+.wrapper main .container .content .cart-list-products li .description-and-delete-button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: description;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 650px) {
+  .wrapper main .container .content .cart-list-products li .description-and-delete-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 20px;
+  }
+}
+.wrapper main .container .content .cart-list-products li .description-and-delete-button .description {
+  font-size: 16px;
+  color: #0c0c0c;
+  width: 100%;
+}
+.wrapper main .container .content .cart-list-products li .description-and-delete-button .delete-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 81px;
+  height: 36px;
+  background-color: #00ae1c;
+  color: white;
+  border-radius: 8px;
+  font-size: calc(10px + 0.3472222222vw);
+  margin-left: 10px;
+}
+@media (max-width: 650px) {
+  .wrapper main .container .content .cart-list-products li .description-and-delete-button .delete-button {
+    height: 24px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+.wrapper main .container .content .cart-list-products li .description-and-delete-button .delete-button svg {
+  margin-right: 5px;
+}
+.wrapper main .container .content .cart-list-products li .quantity-and-price {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: quantity;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 650px) {
+  .wrapper main .container .content .cart-list-products li .img-cart-item {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .wrapper main .container .content .cart-list-products li .description-and-delete-button {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+  }
+  .wrapper main .container .content .cart-list-products li .quantity-and-price {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+}
+@media (max-width: 650px) {
+  .wrapper main .container .content .cart-list-products li .quantity-and-price {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+.wrapper main .container .content .cart-list-products li .quantity-and-price .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+.wrapper main .container .content .cart-list-products li .quantity-and-price .quantity button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: #00ae1c;
+  border-radius: 8px;
+}
+@media (max-width: 650px) {
+  .wrapper main .container .content .cart-list-products li .quantity-and-price .quantity button {
+    width: 24px;
+    height: 24px;
+  }
+}
+.wrapper main .container .content .cart-list-products li .quantity-and-price .quantity button svg {
+  pointer-events: none;
+}
+.wrapper main .container .content .cart-list-products li .quantity-and-price .quantity span {
+  font-size: 16px;
+  color: #0c0c0c;
+}
+.wrapper main .container .content .cart-list-products li .quantity-and-price .price {
+  font-size: calc(12px + 0.2777777778vw);
+  color: #0c0c0c;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  line-height: 1.5em;
+}
+.wrapper main .container .content .cart-list-products li .quantity-and-price .price span {
+  font-size: calc(18px + 0.4166666667vw);
+}
+.wrapper main .container .content .total-amount-and-price {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 15px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  gap: 15px;
+  width: 250px;
+}
+.wrapper main .container .content .total-amount-and-price > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.wrapper main .container .content .total-amount-and-price > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.wrapper main .container .content .total-amount-and-price p {
+  font-size: 20px;
+  color: #243573;
+}
+.wrapper main .container .content .total-amount-and-price span {
+  font-weight: bold;
+  font-size: 20px;
+  color: #243573;
+}
+.wrapper main .container .content .next-step-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  height: 36px;
+  background-color: #00ae1c;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+          box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}

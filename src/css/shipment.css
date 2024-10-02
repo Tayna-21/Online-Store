@@ -1,0 +1,87 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+form .shipment-form-field .form-input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+@media (max-width: 800px) {
+    form .shipment-form-field .form-input-field {
+        width: 100%;
+    }
+}
+form .shipment-form-field .form-input-field label {
+    font-size: 10px;
+    color: #243573;
+    font-weight: bold;
+}
+form .shipment-form-field .form-input-field input {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #737373;
+    background: none;
+    color: #243573;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+form .shipment-form-field .form-input-field input:focus {
+    border-bottom: 1px solid #243573;
+}
+form .shipment-form-field .form-input-field input::placeholder {
+    font-size: calc(10px + 0.3289473684vw);
+    color: #243573;
+    opacity: 80%;
+}
+form .shipment-form-field .form-input-field .invalid {
+    border-bottom: 1px solid #ff5620;
+}
+form .shipment-form-field .form-input-field span {
+    color: #ff5620;
+    font-size: 10px;
+}
+
+form .shipment-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+form .shipment-form-field .selects {
+    display: flex;
+    gap: 45px;
+}
+@media (max-width: 800px) {
+    form .shipment-form-field .selects {
+        flex-direction: column;
+    }
+}
+form .shipment-form-field .selects .form-input-field {
+    width: 250px;
+}
+@media (max-width: 800px) {
+    form .shipment-form-field .selects .form-input-field {
+        width: 100%;
+    }
+}
+form .shipment-form-field select {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #737373;
+    background: none;
+    color: #243573;
+    opacity: 80%;
+    font-size: calc(10px + 0.3289473684vw);
+}

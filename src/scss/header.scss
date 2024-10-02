@@ -1,0 +1,114 @@
+
+.header {
+    width: 100%;
+    padding: 0 1em;
+    background-color: #171717;
+    border-bottom: 1px solid #454545;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+
+        .header-container {
+            max-width: 1330px;
+            margin: 0 auto;
+
+                .content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 80px;
+
+                        strong {
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+
+                                    .home {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 15px;
+                                        height: 50px;
+
+                                            .logo {
+                                                position: relative;
+                                                display: flex;
+                                                width: 46px;
+                                                height: 30px;
+
+                                                    .square {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        border-radius: 5px;
+                                                        transform: rotateZ(45deg);
+                                                        background-color: $button_green;
+                                                    }
+
+                                                    .bright {
+                                                        position: absolute;
+                                                        top: 0;
+                                                        left: 4px;
+                                                        z-index: 10;
+                                                    }
+
+                                                    .dark {
+                                                        position: absolute;
+                                                        top: 0;
+                                                        right: 0;
+                                                        background-color: #004c0c;
+                                                    }
+                                            }
+
+                                            span {
+                                                color: white;
+                                                font-size: calc(16px + 8 * (100vw / 1440));
+
+                                                &:hover {
+                                                    color: #00ae1c;
+                                                    transition: .2s ease-in;
+                                                }
+                                            }
+                                    }
+                        }
+
+                        .cart-button {
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: calc(60px + 40 * (100vw / 1440));
+                            background-color: $button_green;
+                            border-radius: $border_radius;
+                            padding: .3em 0;
+                            color: $text_white;
+                            font-size: calc(10px + 5 * (100vw / 1440));
+                            font-family: 'Roboto';
+                            line-height: 1.5em;
+
+                            &:hover {
+                                @extend %hover-button;
+                            }
+
+                                svg{
+                                    margin-right: 10px;
+                                }
+
+                                .amount {
+                                    position: absolute;
+                                    top: -5px;
+                                    right: -5px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 16px;
+                                    height: 16px;
+                                    border-radius: 50%;
+                                    background-color: yellow;
+
+                                        span {
+                                            color: black;
+                                            font-size: 11px;
+                                        }
+                                }
+                        }
+                }
+        }
+}

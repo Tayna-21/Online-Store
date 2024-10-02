@@ -1,0 +1,128 @@
+.confirmation-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+}
+.confirmation-details .icons-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #00ae1c, #f2f5f7);
+}
+.confirmation-details .icons-background svg {
+    width: 33px;
+    height: 24px;
+}
+.confirmation-details h1 {
+    font-size: calc(18px + 0.9722222222vw);
+    color: #243573;
+}
+.confirmation-details .confirmation-message {
+    font-size: calc(12px + 0.2777777778vw);
+    color: #243573;
+}
+.confirmation-details .order-number {
+    font-size: calc(12px + 0.2777777778vw);
+    font-weight: bold;
+    color: #243573;
+}
+.confirmation-details .order-date {
+    font-size: calc(12px + 0.2777777778vw);
+    color: #737373;
+}
+
+.order-and-personal-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "contacts shipment" "order order";
+    gap: 30px;
+}
+@media (max-width: 768px) {
+    .order-and-personal-data {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.order-and-personal-data .background {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+.order-and-personal-data .contacts-data {
+    grid-area: contacts;
+}
+.order-and-personal-data .shipment-data {
+    grid-area: shipment;
+}
+.order-and-personal-data .title {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.order-and-personal-data .title h6 {
+    font-size: calc(12px + 0.2777777778vw);
+    color: #243573;
+    font-weight: bold;
+}
+.order-and-personal-data p {
+    font-size: calc(12px + 0.2777777778vw);
+    color: black;
+    line-height: 1.5em;
+}
+.order-and-personal-data .order-summary {
+    grid-area: order;
+}
+.order-and-personal-data .order-summary ul {
+    margin-bottom: 10px;
+}
+.order-and-personal-data .order-summary ul li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "image description" "image price";
+    gap: 10px 20px;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px 5px;
+}
+.order-and-personal-data .order-summary ul li .order-product-image {
+    grid-area: image;
+    width: 90px;
+    height: 90px;
+}
+.order-and-personal-data .order-summary ul li .order-product-description {
+    grid-area: description;
+    font-size: calc(12px + 0.2777777778vw);
+    color: #0c0c0c;
+    line-height: 1.1em;
+}
+.order-and-personal-data .order-summary ul li .order-product-price-quantity {
+    grid-area: price;
+    align-self: center;
+    font-size: calc(12px + 0.2777777778vw);
+    color: #0c0c0c;
+    font-weight: bold;
+    line-height: 1.1em;
+}
+.order-and-personal-data .order-summary .prices {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    max-width: 320px;
+    gap: 10px;
+}
+.order-and-personal-data .order-summary .prices h6, .order-and-personal-data .order-summary .prices p {
+    font-size: calc(14px + 0.4166666667vx);
+    color: black;
+    line-height: 1.1em;
+}
+.order-and-personal-data .order-summary .prices .grand-total-price {
+    font-weight: bold;
+}

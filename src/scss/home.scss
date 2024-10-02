@@ -1,0 +1,102 @@
+@import 'reset.scss';
+@import 'vars.scss';
+@import 'templates.scss';
+@import 'header.scss';
+
+.home-page-wrapper {
+    background-color: $wrapper_background;
+
+        .home-page-main {
+            width: 100%;
+            padding: 40px 1em 60px 1em;
+
+                .home-container {
+                    max-width: 1330px;
+                    margin: 0 auto;
+
+                        .home-list-products {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 2em;
+
+                            @media(max-width: 450px) {
+                                flex-direction: column;
+                            }
+
+                                li {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    gap: 20px;
+                                    background-color: $background_white;
+                                    padding: 10px;
+                                    width: calc((100% - 8em) / 5);
+                                    border-radius: $border_radius;
+                                    box-shadow: $box_shadow;
+
+                                    @media(max-width: 1280px) {
+                                        width: calc((100% - 6em) / 4);
+                                    }
+
+                                    @media(max-width: 1023px) {
+                                        width: calc((100% - 4em) / 3);
+                                    }
+
+                                    @media(max-width: 767px) {
+                                        width: calc((100% - 2em) / 2);
+                                    }
+
+                                    @media(max-width: 450px) {
+                                        width: 100%;
+                                    }
+
+                                        .img-block {
+                                            width: 100%;
+                                            height: 245px;
+                                        }
+
+                                        .info-block {
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+                                            gap: 15px;
+
+                                                .description {
+                                                    font-size: calc(10px + 6 * (100vw /1440));
+                                                    line-height: 1.2em;
+                                                    color: $text_dark;
+                                                }
+
+                                                .price {
+                                                    color: $text_dark;
+                                                    font-size: calc(18px + 6 * (100vw / 1440));
+                                                }
+
+                                                button {
+                                                    width: 100%;
+                                                    padding: 10px 0;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    color: $text_white;
+                                                    font-size: 15px;
+                                                    background-color: $button_green;
+                                                    border-radius: $border_radius;
+
+                                                    &:hover {
+                                                        @extend %hover-button;
+                                                    }
+
+                                                        svg {
+                                                            width: 15px;
+                                                            height: 15px;
+                                                            margin-right: 5px;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }  
+}

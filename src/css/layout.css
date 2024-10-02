@@ -1,0 +1,854 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input {
+    appearance: none;
+    border-radius: 0;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+}
+
+.next-step-button:hover, .cart-list-products li .quantity-and-price .quantity button:hover, .cart-list-products li .description-and-delete-button .delete-button:hover, .header .header-container .content .cart-button:hover {
+    border: 1px solid #5ce171;
+    transition: 0.2s ease-in;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.next-step-button:disabled, .cart-list-products li .quantity-and-price .quantity button:disabled {
+    background-color: #187727;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+form .shipment-form-field .form-input-field, form .contact-form-field .form-input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+@media (max-width: 800px) {
+    form .shipment-form-field .form-input-field, form .contact-form-field .form-input-field {
+        width: 100%;
+    }
+}
+form .shipment-form-field .form-input-field label, form .contact-form-field .form-input-field label {
+    font-size: 10px;
+    color: #243573;
+    font-weight: bold;
+}
+form .shipment-form-field .form-input-field input, form .contact-form-field .form-input-field input {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #737373;
+    background: none;
+    color: #243573;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+form .shipment-form-field .form-input-field input:focus, form .contact-form-field .form-input-field input:focus {
+    border-bottom: 1px solid #243573;
+}
+form .shipment-form-field .form-input-field input::placeholder, form .contact-form-field .form-input-field input::placeholder {
+    font-size: calc(10px + 0.3289473684vw);
+    color: #243573;
+    opacity: 80%;
+}
+form .shipment-form-field .form-input-field .invalid, form .contact-form-field .form-input-field .invalid {
+    border-bottom: 1px solid #ff5620;
+}
+form .shipment-form-field .form-input-field span, form .contact-form-field .form-input-field span {
+    color: #ff5620;
+    font-size: 10px;
+}
+
+.header {
+    width: 100%;
+    padding: 0 1em;
+    background-color: #171717;
+    border-bottom: 1px solid #454545;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.header .header-container {
+    max-width: 1330px;
+    margin: 0 auto;
+}
+.header .header-container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.header .header-container .content strong:hover {
+    cursor: pointer;
+}
+.header .header-container .content strong .home {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 50px;
+}
+.header .header-container .content strong .home .logo {
+    position: relative;
+    display: flex;
+    width: 46px;
+    height: 30px;
+}
+.header .header-container .content strong .home .logo .square {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    transform: rotateZ(45deg);
+    background-color: #00ae1c;
+}
+.header .header-container .content strong .home .logo .bright {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    z-index: 10;
+}
+.header .header-container .content strong .home .logo .dark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #004c0c;
+}
+.header .header-container .content strong .home span {
+    color: white;
+    font-size: calc(16px + 0.5555555556vw);
+}
+.header .header-container .content strong .home span:hover {
+    color: #00ae1c;
+    transition: 0.2s ease-in;
+}
+.header .header-container .content .cart-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(60px + 2.7777777778vw);
+    background-color: #00ae1c;
+    border-radius: 8px;
+    padding: 0.3em 0;
+    color: white;
+    font-size: calc(10px + 0.3472222222vw);
+    font-family: "Roboto";
+    line-height: 1.5em;
+}
+.header .header-container .content .cart-button svg {
+    margin-right: 10px;
+}
+.header .header-container .content .cart-button .amount {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+.header .header-container .content .cart-button .amount span {
+    color: black;
+    font-size: 11px;
+}
+
+.next-step-button:hover, .cart-list-products li .quantity-and-price .quantity button:hover, .cart-list-products li .description-and-delete-button .delete-button:hover, .header .header-container .content .cart-button:hover {
+    border: 1px solid #5ce171;
+    transition: 0.2s ease-in;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.next-step-button:disabled, .cart-list-products li .quantity-and-price .quantity button:disabled {
+    background-color: #187727;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+form .shipment-form-field .form-input-field, form .contact-form-field .form-input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+@media (max-width: 800px) {
+    form .shipment-form-field .form-input-field, form .contact-form-field .form-input-field {
+        width: 100%;
+    }
+}
+form .shipment-form-field .form-input-field label, form .contact-form-field .form-input-field label {
+    font-size: 10px;
+    color: #243573;
+    font-weight: bold;
+}
+form .shipment-form-field .form-input-field input, form .contact-form-field .form-input-field input {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #737373;
+    background: none;
+    color: #243573;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+form .shipment-form-field .form-input-field input:focus, form .contact-form-field .form-input-field input:focus {
+    border-bottom: 1px solid #243573;
+}
+form .shipment-form-field .form-input-field input::placeholder, form .contact-form-field .form-input-field input::placeholder {
+    font-size: calc(10px + 0.3289473684vw);
+    color: #243573;
+    opacity: 80%;
+}
+form .shipment-form-field .form-input-field .invalid, form .contact-form-field .form-input-field .invalid {
+    border-bottom: 1px solid #ff5620;
+}
+form .shipment-form-field .form-input-field span, form .contact-form-field .form-input-field span {
+    color: #ff5620;
+    font-size: 10px;
+}
+
+h1 {
+    font-size: calc(24px + 0.5555555556vw);
+    color: #243573;
+}
+
+.cart-list-products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.cart-list-products li {
+    display: grid;
+    grid-template-columns: 130px auto;
+    grid-template-rows: auto;
+    grid-template-areas: "image description" "image quantity";
+    gap: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+@media (max-width: 650px) {
+    .cart-list-products li {
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: "image description" "quantity description";
+        gap: 15px;
+    }
+}
+@media (max-width: 440px) {
+    .cart-list-products li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 35px;
+    }
+}
+.cart-list-products li .img-cart-item {
+    grid-area: image;
+    width: 130px;
+    height: 130px;
+}
+@media (max-width: 440px) {
+    .cart-list-products li .img-cart-item {
+        align-self: center;
+    }
+}
+.cart-list-products li .description-and-delete-button {
+    grid-area: description;
+    display: flex;
+}
+@media (max-width: 650px) {
+    .cart-list-products li .description-and-delete-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+.cart-list-products li .description-and-delete-button .description {
+    font-size: 16px;
+    color: #0c0c0c;
+    width: 100%;
+}
+.cart-list-products li .description-and-delete-button .delete-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 81px;
+    height: 36px;
+    background-color: #00ae1c;
+    color: white;
+    border-radius: 8px;
+    font-size: calc(10px + 0.3472222222vw);
+    margin-left: 10px;
+}
+@media (max-width: 650px) {
+    .cart-list-products li .description-and-delete-button .delete-button {
+        height: 24px;
+        align-self: flex-end;
+    }
+}
+.cart-list-products li .description-and-delete-button .delete-button svg {
+    margin-right: 5px;
+}
+.cart-list-products li .quantity-and-price {
+    grid-area: quantity;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+@media (max-width: 650px) {
+    .cart-list-products li .quantity-and-price {
+        flex-direction: row-reverse;
+    }
+}
+.cart-list-products li .quantity-and-price .quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    align-self: end;
+}
+.cart-list-products li .quantity-and-price .quantity button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #00ae1c;
+    border-radius: 8px;
+}
+@media (max-width: 650px) {
+    .cart-list-products li .quantity-and-price .quantity button {
+        width: 24px;
+        height: 24px;
+    }
+}
+.cart-list-products li .quantity-and-price .quantity button svg {
+    pointer-events: none;
+}
+.cart-list-products li .quantity-and-price .quantity span {
+    font-size: 16px;
+    color: #0c0c0c;
+}
+.cart-list-products li .quantity-and-price .price {
+    font-size: calc(12px + 0.2777777778vw);
+    color: #0c0c0c;
+    align-self: end;
+    line-height: 1.5em;
+}
+.cart-list-products li .quantity-and-price .price span {
+    font-size: calc(18px + 0.4166666667vw);
+}
+
+.total-amount-and-price {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+    width: 250px;
+}
+.total-amount-and-price p {
+    font-size: 20px;
+    color: #243573;
+}
+.total-amount-and-price .total-value {
+    font-weight: bold;
+    font-size: 20px;
+    color: #243573;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+}
+.breadcrumbs li::after {
+    content: ">";
+    font-size: calc(9px + 0.4861111111vw);
+    color: #243573;
+    margin: 0 0.5em;
+}
+.breadcrumbs li:last-child::after {
+    display: none;
+}
+.breadcrumbs li a {
+    font-size: calc(9px + 0.4861111111vw);
+    color: #243573;
+}
+.breadcrumbs li a:hover {
+    text-decoration: underline;
+}
+.breadcrumbs li .active {
+    color: #00ae1c;
+}
+.breadcrumbs li .inactive {
+    pointer-events: none;
+}
+
+.next-step-button:hover, .header .header-container .content .cart-button:hover, .cart-list-products li .description-and-delete-button .delete-button:hover, .cart-list-products li .quantity-and-price .quantity button:hover {
+    border: 1px solid #5ce171;
+    transition: 0.2s ease-in;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.next-step-button:disabled, .cart-list-products li .quantity-and-price .quantity button:disabled {
+    background-color: #187727;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+form .shipment-form-field .form-input-field, form .contact-form-field .form-input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+@media (max-width: 800px) {
+    form .shipment-form-field .form-input-field, form .contact-form-field .form-input-field {
+        width: 100%;
+    }
+}
+form .shipment-form-field .form-input-field label, form .contact-form-field .form-input-field label {
+    font-size: 10px;
+    color: #243573;
+    font-weight: bold;
+}
+form .shipment-form-field .form-input-field input, form .contact-form-field .form-input-field input {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #737373;
+    background: none;
+    color: #243573;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+form .shipment-form-field .form-input-field input:focus, form .contact-form-field .form-input-field input:focus {
+    border-bottom: 1px solid #243573;
+}
+form .shipment-form-field .form-input-field input::placeholder, form .contact-form-field .form-input-field input::placeholder {
+    font-size: calc(10px + 0.3289473684vw);
+    color: #243573;
+    opacity: 80%;
+}
+form .shipment-form-field .form-input-field .invalid, form .contact-form-field .form-input-field .invalid {
+    border-bottom: 1px solid #ff5620;
+}
+form .shipment-form-field .form-input-field span, form .contact-form-field .form-input-field span {
+    color: #ff5620;
+    font-size: 10px;
+}
+
+form .contact-form-field {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    gap: 50px;
+    width: 100%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 800px) {
+    form .contact-form-field {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.next-step-button:hover, .header .header-container .content .cart-button:hover, .cart-list-products li .description-and-delete-button .delete-button:hover, .cart-list-products li .quantity-and-price .quantity button:hover {
+    border: 1px solid #5ce171;
+    transition: 0.2s ease-in;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.next-step-button:disabled, .cart-list-products li .quantity-and-price .quantity button:disabled {
+    background-color: #187727;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+form .shipment-form-field .form-input-field, form .contact-form-field .form-input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+@media (max-width: 800px) {
+    form .shipment-form-field .form-input-field, form .contact-form-field .form-input-field {
+        width: 100%;
+    }
+}
+form .shipment-form-field .form-input-field label, form .contact-form-field .form-input-field label {
+    font-size: 10px;
+    color: #243573;
+    font-weight: bold;
+}
+form .shipment-form-field .form-input-field input, form .contact-form-field .form-input-field input {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #737373;
+    background: none;
+    color: #243573;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+form .shipment-form-field .form-input-field input:focus, form .contact-form-field .form-input-field input:focus {
+    border-bottom: 1px solid #243573;
+}
+form .shipment-form-field .form-input-field input::placeholder, form .contact-form-field .form-input-field input::placeholder {
+    font-size: calc(10px + 0.3289473684vw);
+    color: #243573;
+    opacity: 80%;
+}
+form .shipment-form-field .form-input-field .invalid, form .contact-form-field .form-input-field .invalid {
+    border-bottom: 1px solid #ff5620;
+}
+form .shipment-form-field .form-input-field span, form .contact-form-field .form-input-field span {
+    color: #ff5620;
+    font-size: 10px;
+}
+
+form .shipment-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+form .shipment-form-field .selects {
+    display: flex;
+    gap: 45px;
+}
+@media (max-width: 800px) {
+    form .shipment-form-field .selects {
+        flex-direction: column;
+    }
+}
+form .shipment-form-field .selects .form-input-field {
+    width: 250px;
+}
+@media (max-width: 800px) {
+    form .shipment-form-field .selects .form-input-field {
+        width: 100%;
+    }
+}
+form .shipment-form-field select {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #737373;
+    background: none;
+    color: #243573;
+    opacity: 80%;
+    font-size: calc(10px + 0.3289473684vw);
+}
+
+.confirmation-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+}
+.confirmation-details .icons-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #00ae1c, #f2f5f7);
+}
+.confirmation-details .icons-background svg {
+    width: 33px;
+    height: 24px;
+}
+.confirmation-details h1 {
+    font-size: calc(18px + 0.9722222222vw);
+    color: #243573;
+}
+.confirmation-details .confirmation-message {
+    font-size: calc(12px + 0.2777777778vw);
+    color: #243573;
+}
+.confirmation-details .order-number {
+    font-size: calc(12px + 0.2777777778vw);
+    font-weight: bold;
+    color: #243573;
+}
+.confirmation-details .order-date {
+    font-size: calc(12px + 0.2777777778vw);
+    color: #737373;
+}
+
+.order-and-personal-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "contacts shipment" "order order";
+    gap: 30px;
+}
+@media (max-width: 768px) {
+    .order-and-personal-data {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.order-and-personal-data .background {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+.order-and-personal-data .contacts-data {
+    grid-area: contacts;
+}
+.order-and-personal-data .shipment-data {
+    grid-area: shipment;
+}
+.order-and-personal-data .title {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.order-and-personal-data .title h6 {
+    font-size: calc(12px + 0.2777777778vw);
+    color: #243573;
+    font-weight: bold;
+}
+.order-and-personal-data p {
+    font-size: calc(12px + 0.2777777778vw);
+    color: black;
+    line-height: 1.5em;
+}
+.order-and-personal-data .order-summary {
+    grid-area: order;
+}
+.order-and-personal-data .order-summary ul {
+    margin-bottom: 10px;
+}
+.order-and-personal-data .order-summary ul li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "image description" "image price";
+    gap: 10px 20px;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 10px 5px;
+}
+.order-and-personal-data .order-summary ul li .order-product-image {
+    grid-area: image;
+    width: 90px;
+    height: 90px;
+}
+.order-and-personal-data .order-summary ul li .order-product-description {
+    grid-area: description;
+    font-size: calc(12px + 0.2777777778vw);
+    color: #0c0c0c;
+    line-height: 1.1em;
+}
+.order-and-personal-data .order-summary ul li .order-product-price-quantity {
+    grid-area: price;
+    align-self: center;
+    font-size: calc(12px + 0.2777777778vw);
+    color: #0c0c0c;
+    font-weight: bold;
+    line-height: 1.1em;
+}
+.order-and-personal-data .order-summary .prices {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    max-width: 320px;
+    gap: 10px;
+}
+.order-and-personal-data .order-summary .prices h6, .order-and-personal-data .order-summary .prices p {
+    font-size: calc(14px + 0.4166666667vx);
+    color: black;
+    line-height: 1.1em;
+}
+.order-and-personal-data .order-summary .prices .grand-total-price {
+    font-weight: bold;
+}
+
+.next-step-button:hover, .header .header-container .content .cart-button:hover, .cart-list-products li .description-and-delete-button .delete-button:hover, .cart-list-products li .quantity-and-price .quantity button:hover {
+    border: 1px solid #5ce171;
+    transition: 0.2s ease-in;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.next-step-button:disabled, .cart-list-products li .quantity-and-price .quantity button:disabled {
+    background-color: #187727;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+form .contact-form-field .form-input-field, form .shipment-form-field .form-input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+@media (max-width: 800px) {
+    form .contact-form-field .form-input-field, form .shipment-form-field .form-input-field {
+        width: 100%;
+    }
+}
+form .contact-form-field .form-input-field label, form .shipment-form-field .form-input-field label {
+    font-size: 10px;
+    color: #243573;
+    font-weight: bold;
+}
+form .contact-form-field .form-input-field input, form .shipment-form-field .form-input-field input {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #737373;
+    background: none;
+    color: #243573;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+form .contact-form-field .form-input-field input:focus, form .shipment-form-field .form-input-field input:focus {
+    border-bottom: 1px solid #243573;
+}
+form .contact-form-field .form-input-field input::placeholder, form .shipment-form-field .form-input-field input::placeholder {
+    font-size: calc(10px + 0.3289473684vw);
+    color: #243573;
+    opacity: 80%;
+}
+form .contact-form-field .form-input-field .invalid, form .shipment-form-field .form-input-field .invalid {
+    border-bottom: 1px solid #ff5620;
+}
+form .contact-form-field .form-input-field span, form .shipment-form-field .form-input-field span {
+    color: #ff5620;
+    font-size: 10px;
+}
+
+.next-step-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 36px;
+    background-color: #00ae1c;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+.wrapper {
+    background-color: #f2f5f7;
+}
+.wrapper main {
+    width: 100%;
+    padding: 40px 1em 100px 1em;
+    min-height: 100vh;
+}
+.wrapper main .container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.wrapper main .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}

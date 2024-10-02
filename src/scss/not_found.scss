@@ -1,0 +1,42 @@
+@import 'vars.scss';
+
+.wrapper-error {
+	background-color: $wrapper_background;
+	height: 100vh;
+	padding: 15px;
+
+	    .container-error {
+			max-width: 960px;
+			margin: 0 auto;
+
+			    .content-error {
+                    display: flex;
+	                justify-content: center;
+	                align-items: center;
+					height: 100vh;
+
+			            .background-error {
+				            display: flex;
+				            flex-direction: column;
+				            align-items: center;
+					        justify-content: center;
+				            background-color: $background_white;
+				            box-shadow: $box_shadow;
+					        width: 100%;
+					        height: 500px;
+					        gap: 30px;
+
+					            h1 {
+							        font-size: calc(24px + 24 * (100vw / 1440));
+							        font-weight: bold;
+							        color: $button_green;
+						        }
+
+						        p {
+							        font-size: calc(18px + 14 * (100vw / 1440));
+							        color: $text_blue
+						        }
+			            }
+			    }
+		}
+}

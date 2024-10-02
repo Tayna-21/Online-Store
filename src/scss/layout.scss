@@ -1,0 +1,32 @@
+@import 'reset.scss';
+@import 'vars.scss';
+@import 'templates.scss';
+@import 'header.scss';
+@import 'cart.scss';
+@import 'breadcrumbs.scss';
+@import 'contacts.scss';
+@import 'shipment.scss';
+@import 'confirmation.scss';
+@import 'button.scss';
+
+.wrapper {
+    background-color: $wrapper_background;
+
+        main {
+            width: 100%;
+            padding: 40px 1em 100px 1em;
+            min-height: 100vh;
+
+                .container {
+                    max-width: $container_width;
+                    margin: 0 auto;
+
+                        .content {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            gap: 30px;
+                        }
+                }
+        }
+}

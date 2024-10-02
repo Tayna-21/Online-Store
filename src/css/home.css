@@ -1,0 +1,246 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input {
+    appearance: none;
+    border-radius: 0;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+}
+
+.home-page-wrapper .home-page-main .home-container .home-list-products li .info-block button:hover, .header .header-container .content .cart-button:hover {
+    border: 1px solid #5ce171;
+    transition: 0.2s ease-in;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.header {
+    width: 100%;
+    padding: 0 1em;
+    background-color: #171717;
+    border-bottom: 1px solid #454545;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.header .header-container {
+    max-width: 1330px;
+    margin: 0 auto;
+}
+.header .header-container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.header .header-container .content strong:hover {
+    cursor: pointer;
+}
+.header .header-container .content strong .home {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 50px;
+}
+.header .header-container .content strong .home .logo {
+    position: relative;
+    display: flex;
+    width: 46px;
+    height: 30px;
+}
+.header .header-container .content strong .home .logo .square {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    transform: rotateZ(45deg);
+    background-color: #00ae1c;
+}
+.header .header-container .content strong .home .logo .bright {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    z-index: 10;
+}
+.header .header-container .content strong .home .logo .dark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #004c0c;
+}
+.header .header-container .content strong .home span {
+    color: white;
+    font-size: calc(16px + 0.5555555556vw);
+}
+.header .header-container .content strong .home span:hover {
+    color: #00ae1c;
+    transition: 0.2s ease-in;
+}
+.header .header-container .content .cart-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(60px + 2.7777777778vw);
+    background-color: #00ae1c;
+    border-radius: 8px;
+    padding: 0.3em 0;
+    color: white;
+    font-size: calc(10px + 0.3472222222vw);
+    font-family: "Roboto";
+    line-height: 1.5em;
+}
+.header .header-container .content .cart-button svg {
+    margin-right: 10px;
+}
+.header .header-container .content .cart-button .amount {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+.header .header-container .content .cart-button .amount span {
+    color: black;
+    font-size: 11px;
+}
+
+.home-page-wrapper {
+    background-color: #f2f5f7;
+}
+.home-page-wrapper .home-page-main {
+    width: 100%;
+    padding: 40px 1em 60px 1em;
+}
+.home-page-wrapper .home-page-main .home-container {
+    max-width: 1330px;
+    margin: 0 auto;
+}
+.home-page-wrapper .home-page-main .home-container .home-list-products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+@media (max-width: 450px) {
+    .home-page-wrapper .home-page-main .home-container .home-list-products {
+        flex-direction: column;
+    }
+}
+.home-page-wrapper .home-page-main .home-container .home-list-products li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: white;
+    padding: 10px;
+    width: calc((100% - 8em) / 5);
+    border-radius: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1280px) {
+    .home-page-wrapper .home-page-main .home-container .home-list-products li {
+        width: calc((100% - 6em) / 4);
+    }
+}
+@media (max-width: 1023px) {
+    .home-page-wrapper .home-page-main .home-container .home-list-products li {
+        width: calc((100% - 4em) / 3);
+    }
+}
+@media (max-width: 767px) {
+    .home-page-wrapper .home-page-main .home-container .home-list-products li {
+        width: calc((100% - 2em) / 2);
+    }
+}
+@media (max-width: 450px) {
+    .home-page-wrapper .home-page-main .home-container .home-list-products li {
+        width: 100%;
+    }
+}
+.home-page-wrapper .home-page-main .home-container .home-list-products li .img-block {
+    width: 100%;
+    height: 245px;
+}
+.home-page-wrapper .home-page-main .home-container .home-list-products li .info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+.home-page-wrapper .home-page-main .home-container .home-list-products li .info-block .description {
+    font-size: calc(10px + 0.4166666667vw);
+    line-height: 1.2em;
+    color: #0c0c0c;
+}
+.home-page-wrapper .home-page-main .home-container .home-list-products li .info-block .price {
+    color: #0c0c0c;
+    font-size: calc(18px + 0.4166666667vw);
+}
+.home-page-wrapper .home-page-main .home-container .home-list-products li .info-block button {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    background-color: #00ae1c;
+    border-radius: 8px;
+}
+.home-page-wrapper .home-page-main .home-container .home-list-products li .info-block button svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
